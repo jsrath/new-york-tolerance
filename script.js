@@ -3,6 +3,10 @@ const dataArray = [];
 const valuesArray = [];
 const population = {};
 const percentArray = [];
+const clientWidth = document.querySelector('body').getBoundingClientRect().width * 0.7;
+
+let svgs = document.getElementsByTagName('svg');
+[...svgs].forEach(svg => svg.setAttribute('width', clientWidth));
 
 async function getData() {
   await d3.csv('./data.csv', data => {
@@ -72,7 +76,7 @@ function colorPopulation() {
         tooltip.style('display', 'block').html(
           `<p><strong>${element.county} County</strong></p>
           <p>${(element.total / (element.population / 10000)).toFixed(2)} Hate Crimes </p> 
-          <p>Per 10,000 people</p>`,
+          <p>Per 10,000 People</p>`,
         ),
       )
       .on('mousemove', () => tooltip.style('top', `${d3.event.pageY + 10}px`).style('left', `${d3.event.pageX + 20}px`))
