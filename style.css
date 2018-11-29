@@ -1,58 +1,65 @@
-body {
-  padding: 0;
-  margin: 0 0 50px;
-  font-family: 'Rubik', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-}
+ body {
+   padding: 0;
+   margin: 0 0 50px;
+   font-family: 'Rubik', sans-serif;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+ }
 
-h1 {
-  margin: 30px 0 0;
-}
+ h1 {
+   margin: 30px 0 0;
+ }
 
-h2 {
-  margin-bottom: 50px;
-}
+ h2 {
+   margin-bottom: 50px;
+ }
 
-.container {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 95%;
-  flex-wrap: wrap;
-}
+ .container {
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 95%;
+   flex-wrap: wrap;
+ }
 
-.total-container, .population-container {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  padding: 30px;
-  background-color: rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  width: 40%;
-}
+ .total-container, .population-container {
+   margin-top: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   padding: 30px;
+   background-color: rgba(0, 0, 0, 0.1);
+   border: 1px solid rgba(0, 0, 0, 0.5);
+   width: 40%;
+ }
 
-.tooltip {
-  position: absolute;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #4B5775;
-  padding: 5px 20px;
-  pointer-events: none;
-  display: none;
-}
+ .tooltip {
+   position: absolute;
+   text-align: center;
+   background-color: rgba(255, 255, 255, 0.9);
+   color: #4B5775;
+   padding: 5px 20px;
+   pointer-events: none;
+   display: none;
+ }
 
-.tooltip p {
-  margin: 0;
-  padding: 2px 0;
-}
+ .tooltip p {
+   margin: 0;
+   padding: 2px 0;
+ }
 
-.displayed {
-  display: flex;
-}
+ .displayed {
+   display: flex;
+ }
+
+ .total-map {
+   width: 20vmin;
+   height: 20vmin;
+   max-width: 200px;
+   max-height: 200px;
+ }

@@ -3,11 +3,14 @@ const dataArray = [];
 const valuesArray = [];
 const population = {};
 const percentArray = [];
-const clientWidth = document.querySelector('body').getBoundingClientRect().width * 0.7;
+const clientWidth = document.querySelector('body').getBoundingClientRect().width;
 
-let svgs = document.getElementsByTagName('svg');
-[...svgs].forEach(svg => svg.setAttribute('width', clientWidth));
-
+/* let svgs = document.getElementsByTagName('svg');
+[...svgs].forEach(svg => {
+  svg.setAttribute('width', clientWidth);
+  svg.setAttribute('height', clientWidth / 1.33);
+});
+ */
 async function getData() {
   await d3.csv('./data.csv', data => {
     if (dataObj[data.County]) {
