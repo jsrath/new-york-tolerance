@@ -2,19 +2,38 @@
    padding: 0;
    margin: 0 0 50px;
    font-family: 'Rubik', sans-serif;
+   font-weight: 400;
+   letter-spacing: 0.05em;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+   background-color: #93291e;
+   color: #fff;
+ }
+
+ h1, h2, h3, strong {
+   margin: 10px 0;
+   padding: 0;
+   font-weight: 500;
  }
 
  h1 {
-   margin: 30px 0 0;
+   text-align: center;
+ }
+
+ .main-title {
+   font-size: 40px;
+   font-weight: 500;
  }
 
  h2 {
    margin-bottom: 50px;
+   text-align: center;
+ }
+
+ h3 {
+   margin-left: 20px;
  }
 
  .container {
@@ -27,15 +46,23 @@
  }
 
  .total-container, .population-container {
-   margin-top: 30px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   display: inline-block;
+   position: relative;
+   width: 49%;
+   padding-bottom: 35%;
+   vertical-align: top;
+   overflow: hidden;
+   margin: 0 auto;
    border-radius: 10px;
-   padding: 30px;
-   background-color: rgba(0, 0, 0, 0.1);
-   border: 1px solid rgba(0, 0, 0, 0.5);
-   width: 40%;
+   border: 1px solid #fff;
+   background-color: rgba(255, 255, 255, 0.3)
+ }
+
+ svg {
+   display: inline-block;
+   position: absolute;
+   top: 10px;
+   left: 10px;
  }
 
  .tooltip {
@@ -46,6 +73,7 @@
    padding: 5px 20px;
    pointer-events: none;
    display: none;
+   border-radius: 10px;
  }
 
  .tooltip p {
@@ -57,9 +85,23 @@
    display: flex;
  }
 
- .total-map {
-   width: 20vmin;
-   height: 20vmin;
-   max-width: 200px;
-   max-height: 200px;
+ @media screen and (max-width: 900px) {
+   .total-container, .population-container {
+     width: 100%;
+     padding-bottom: 75%;
+     margin-top: 30px;
+   }
+   @media screen and (max-width: 600px) {
+     h3 {
+       position: absolute;
+       bottom: 2px;
+       width: 50%;
+       margin-top: 200px;
+     }
+     .total-container, .population-container {
+       width: 100%;
+       padding-bottom: 90%;
+       margin-top: 30px;
+     }
+   }
  }

@@ -3,14 +3,7 @@ const dataArray = [];
 const valuesArray = [];
 const population = {};
 const percentArray = [];
-const clientWidth = document.querySelector('body').getBoundingClientRect().width;
 
-/* let svgs = document.getElementsByTagName('svg');
-[...svgs].forEach(svg => {
-  svg.setAttribute('width', clientWidth);
-  svg.setAttribute('height', clientWidth / 1.33);
-});
- */
 async function getData() {
   await d3.csv('./data.csv', data => {
     if (dataObj[data.County]) {
@@ -52,7 +45,7 @@ function colorTotal() {
       .on('mouseover', () =>
         tooltip.style('display', 'block').html(
           `<p><strong>${element.county} County</strong></p>
-          <p>${element.total} Hate Crime(s)</p>`,
+          <p>${element.total} Crime(s)</p>`,
         ),
       )
       .on('mousemove', () => tooltip.style('top', `${d3.event.pageY + 10}px`).style('left', `${d3.event.pageX + 20}px`))
@@ -78,8 +71,7 @@ function colorPopulation() {
       .on('mouseover', () =>
         tooltip.style('display', 'block').html(
           `<p><strong>${element.county} County</strong></p>
-          <p>${(element.total / (element.population / 10000)).toFixed(2)} Hate Crimes </p> 
-          <p>Per 10,000 People</p>`,
+          <p>${(element.total / (element.population / 10000)).toFixed(2)} Crime(s) </p>`,
         ),
       )
       .on('mousemove', () => tooltip.style('top', `${d3.event.pageY + 10}px`).style('left', `${d3.event.pageX + 20}px`))
